@@ -2,6 +2,15 @@
 
 from xml.dom.minidom import parse
 import xml.dom.minidom
+from MysqlDB.Mysql import MysqlDb
+
+user = 'root'
+password = '123456'
+host = "localhost"
+port = 3306
+dbname = 'test'
+sqldb = MysqlDb()
+conn = sqldb.conn(host,port,dbname,user,password)
 
 # 使用minidom解析器打开 XML 文档
 DOMTree = xml.dom.minidom.parse("JmeterReport.jtl")
@@ -19,6 +28,11 @@ for httpSample in httpSamples:
     if httpSample.hasAttribute("lb"):
         print "Http: %s" % httpSample.getAttribute("lb")
         print httpSample.getAttribute("tn")
+        sqlinsert = "insert into USER(name,pwd) VALUES ('%s','%s')" % (httpSample.getAttribute("lb"),httpSample.getAttribute("tn"))
+        print sqlinsert
+        sqldb.sqlDML(sqlinsert,conn)
+
+
 
 
 

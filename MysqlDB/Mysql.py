@@ -1,14 +1,16 @@
 # -*- coding:utf8 -*-
 import MySQLdb
 
+import sys
 
+print sys.getdefaultencoding()
 class MysqlDb():
     # 连接数据库
     def conn(self,host,port,dbname,user,password):
         try:
             #d = MySQLdb.makedsn(host, port, dbname)
             #cx_Oracle.connect()
-            conn = MySQLdb.connect(host,user,password,dbname)
+            conn = MySQLdb.connect(host,user,password,dbname,charset = 'utf8')
             return conn
         except Exception as e:
             print("connect failed",e)
@@ -54,14 +56,14 @@ if __name__ == '__main__':
     port = 3306
     dbname = 'test'
 
+
     sqlselect = "select * from USER"
-
+    sqlinsert = "insert into USER(name,pwd) VALUES ('GetPublickey：获取公钥','吴娟--接口测试用例 1-1')"
     sqldb = MysqlDb()
-    #print sqldb
-    #conn = MySQLdb.connect(host,port,user,password,dbname)
     conn = sqldb.conn(host,port,dbname,user,password)
-
+    #sqldb.sqlDML(sqlinsert,conn)
     re = sqldb.sqlsearch(sqlselect,conn)
     #print re
     for i in re:
-        print i
+        print type(i)
+        print(i[1])
