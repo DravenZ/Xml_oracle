@@ -6,13 +6,13 @@ import xml.dom.minidom
 # 使用minidom解析器打开 XML 文档
 DOMTree = xml.dom.minidom.parse("JmeterReport.jtl")
 collection = DOMTree.documentElement
-if collection.hasAttribute("shelf"):
-   print "Root element : %s" % collection.getAttribute("shelf")
+if collection.hasAttribute("version"):
+   print "version : %s" % collection.getAttribute("version")
 
 # 在集合中获取所有Http请求
 httpSamples = collection.getElementsByTagName("httpSample")
 httpSamples = list(httpSamples)
-print type(httpSamples)
+# print type(httpSamples)
 print "共有" + str(len(httpSamples)) + "个Http请求"
 # 打印每个Http请求的详细信息
 for httpSample in httpSamples:
