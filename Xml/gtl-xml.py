@@ -18,7 +18,7 @@ print "共有" + str(len(httpSamples)) + "个Http请求"
 for httpSample in httpSamples:
     if httpSample.hasAttribute("lb"):
         print "Title: %s" % httpSample.getAttribute("lb")
-        print 1
+        print 11
    # print "*****Movie*****"
    # if movie.hasAttribute("title"):
    #    print "Title: %s" % movie.getAttribute("title")
