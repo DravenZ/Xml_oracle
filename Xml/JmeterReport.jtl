@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<httpSample t="261" lt="261" ts="1505910731772" s="true" lb="GetPublickey：获取公钥" rc="200" rm="OK" tn="吴娟--接口测试用例 1-1" dt="" by="535" ng="1" na="1"/>
+<sample t="134" lt="0" ts="1505910732058" s="true" lb="RSA加密：对UUID进行加密" rc="200" rm="OK" tn="吴娟--接口测试用例 1-1" dt="text" by="0" ng="1" na="1"/>
+<httpSample t="21" lt="21" ts="1505910732199" s="true" lb="PostDesKry：上传私钥" rc="200" rm="OK" tn="吴娟--接口测试用例 1-1" dt="" by="183" ng="1" na="1"/>
+<sample t="35" lt="0" ts="1505910732221" s="true" lb="DES加密：对登录的用户名密码加密" rc="200" rm="OK" tn="吴娟--接口测试用例 1-1" dt="text" by="0" ng="1" na="1"/>
+<httpSample t="219" lt="219" ts="1505910732261" s="true" lb="Login：登录" rc="200" rm="OK" tn="吴娟--接口测试用例 1-1" dt="" by="681" ng="1" na="1"/>
+<sample t="375" lt="0" ts="1505910732481" s="true" lb="DES解密：对登录返回的值进行解密" rc="200" rm="OK" tn="吴娟--接口测试用例 1-1" dt="text" by="0" ng="1" na="1"/>
+<sample t="1" lt="0" ts="1505910732898" s="true" lb="检查变量" rc="200" rm="OK" tn="吴娟--接口测试用例 1-1" dt="text" by="4098" ng="1" na="1"/>
+<sample t="8" lt="0" ts="1505910732903" s="true" lb="BeanShell Sampler" rc="200" rm="OK" tn="吴娟--接口测试用例 1-1" dt="text" by="0" ng="1" na="1"/>
+<httpSample t="59" lt="58" ts="1505910732912" s="true" lb="Addgoods：新增商品" rc="200" rm="OK" tn="吴娟--接口测试用例 1-1" dt="" by="241" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="21" lt="21" ts="1505910732979" s="true" lb="小票列表" rc="200" rm="OK" tn="吴娟--接口测试用例 1-1" dt="" by="1200" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="90" lt="90" ts="1505910733002" s="true" lb="商品入库" rc="200" rm="OK" tn="吴娟--接口测试用例 1-1" dt="" by="183" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="182" lt="181" ts="1505910733093" s="true" lb="入库商品记录" rc="200" rm="OK" tn="吴娟--接口测试用例 1-1" dt="" by="3959" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="12" lt="12" ts="1505910733276" s="true" lb="查询店铺信息" rc="200" rm="OK" tn="吴娟--接口测试用例 1-1" dt="" by="509" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+
+<sample t="23" lt="0" ts="1505910735907" s="true" lb="随机Devicedid" rc="200" rm="OK" tn="张鹏飞--接口测试用例" dt="text" by="0" ng="1" na="1"/>
+<httpSample t="219" lt="219" ts="1505910736448" s="true" lb="GetPublickey：获取公钥" rc="200" rm="OK" tn="张鹏飞--接口测试用例" dt="" by="535" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<sample t="95" lt="0" ts="1505910736685" s="true" lb="RSA加密：对UUID进行加密" rc="200" rm="OK" tn="张鹏飞--接口测试用例" dt="text" by="0" ng="1" na="1"/>
+<httpSample t="12" lt="12" ts="1505910736780" s="true" lb="PostDesKry：上传私钥" rc="200" rm="OK" tn="张鹏飞--接口测试用例" dt="" by="183" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<sample t="43" lt="0" ts="1505910736796" s="true" lb="DES加密：对登录的用户名密码加密" rc="200" rm="OK" tn="张鹏飞--接口测试用例" dt="text" by="0" ng="1" na="1"/>
+<sample t="1" lt="0" ts="1505910736850" s="true" lb="检查数据" rc="200" rm="OK" tn="张鹏飞--接口测试用例" dt="text" by="1962" ng="1" na="1"/>
+<httpSample t="157" lt="156" ts="1505910736856" s="true" lb="Login：登录" rc="200" rm="OK" tn="张鹏飞--接口测试用例" dt="" by="681" ng="1" na="1"/>
+<sample t="138" lt="0" ts="1505910737013" s="true" lb="DES解密：对登录返回的值进行解密" rc="200" rm="OK" tn="张鹏飞--接口测试用例" dt="text" by="0" ng="1" na="1"/>
+<sample t="1" lt="0" ts="1505910737151" s="true" lb="检查是否登录成功" rc="200" rm="OK" tn="张鹏飞--接口测试用例" dt="text" by="4169" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</sample>
+<httpSample t="26" lt="26" ts="1505910737241" s="true" lb="TransactionList：交易流水" rc="200" rm="OK" tn="张鹏飞--交易流水 3-1" dt="" by="1181" ng="1" na="4">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="51" lt="51" ts="1505910737218" s="true" lb="StoreList：获取加盟商的门店列表" rc="200" rm="OK" tn="张鹏飞--店铺主页数据 1-1" dt="" by="505" ng="1" na="4">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="69" lt="69" ts="1505910737269" s="true" lb="TicketList：小票列表" rc="200" rm="OK" tn="张鹏飞--交易流水 3-1" dt="" by="316" ng="1" na="7"/>
+<httpSample t="17" lt="17" ts="1505910737339" s="true" lb="TicketDetial：小票明细" rc="200" rm="OK" tn="张鹏飞--交易流水 3-1" dt="" by="688" ng="1" na="7"/>
+<sample t="0" lt="0" ts="1505910737357" s="true" lb="Debug Sampler" rc="200" rm="OK" tn="张鹏飞--交易流水 3-1" dt="text" by="3230" ng="1" na="7"/>
+<httpSample t="168" lt="168" ts="1505910737243" s="true" lb="User/StatisticsList:统计列表" rc="200" rm="OK" tn="张鹏飞--数据统计 4-1" dt="" by="349" ng="1" na="7">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="77" lt="77" ts="1505910737335" s="true" lb="SetShopBusiness：营业状态修改" rc="200" rm="OK" tn="张鹏飞--O2O店铺管理 7-1" dt="" by="183" ng="1" na="7">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="103" lt="103" ts="1505910737325" s="true" lb="User/StockList :库存商品列表" rc="200" rm="OK" tn="张鹏飞--库存管理 6-1" dt="" by="2969" ng="1" na="7">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="20" lt="20" ts="1505910737414" s="true" lb="SetShopinfo：设置店铺的O2O信息" rc="200" rm="OK" tn="张鹏飞--O2O店铺管理 7-1" dt="" by="183" ng="1" na="7">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="86" lt="86" ts="1505910737329" s="true" lb="GoodsList：商品列表" rc="200" rm="OK" tn="张鹏飞--商品管理 5-1" dt="" by="4320" ng="1" na="7">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="28" lt="28" ts="1505910737435" s="true" lb="GetShopInfo：查询店铺的O2O信息" rc="200" rm="OK" tn="张鹏飞--O2O店铺管理 7-1" dt="" by="509" ng="1" na="8">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="59" lt="59" ts="1505910737413" s="true" lb="User/StatisticsDetialList:统计详情列表" rc="200" rm="OK" tn="张鹏飞--数据统计 4-1" dt="" by="311" ng="1" na="7">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="85" lt="85" ts="1505910737429" s="true" lb="商品入库" rc="200" rm="OK" tn="张鹏飞--库存管理 6-1" dt="" by="183" ng="1" na="7">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="103" lt="103" ts="1505910737445" s="true" lb="GoodsDetial：门店商品列表中个的商品详情" rc="200" rm="OK" tn="张鹏飞--商品管理 5-1" dt="" by="399" ng="1" na="7">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<sample t="2" lt="0" ts="1505910737552" s="true" lb="随机一个条码" rc="200" rm="OK" tn="张鹏飞--商品管理 5-1" dt="text" by="0" ng="1" na="7"/>
+<sample t="0" lt="0" ts="1505910737584" s="true" lb="Debug Sampler" rc="200" rm="OK" tn="张鹏飞--数据统计 4-1" dt="text" by="828" ng="1" na="7"/>
+<httpSample t="37" lt="37" ts="1505910737554" s="true" lb="GoodsDetial：去查询该商品在门店或主数据是否存在（DataSource）" rc="200" rm="OK" tn="张鹏飞--商品管理 5-1" dt="" by="380" ng="1" na="6">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="150" lt="150" ts="1505910737515" s="true" lb="入库商品记录" rc="200" rm="OK" tn="张鹏飞--库存管理 6-1" dt="" by="3959" ng="1" na="6">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="29" lt="29" ts="1505910737646" s="true" lb="Addgoods：新增商品" rc="200" rm="OK" tn="张鹏飞--商品管理 5-1" dt="" by="241" ng="1" na="5">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="603" lt="603" ts="1505910737390" s="true" lb="TaskList：任务列表" rc="200" rm="OK" tn="张鹏飞--任务中心 8-1" dt="" by="813" ng="1" na="4">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="392" lt="392" ts="1505910737636" s="true" lb="SetStoreDefault：设置默认门店--设置成第二个门店" rc="200" rm="OK" tn="张鹏飞--店铺主页数据 1-1" dt="" by="183" ng="1" na="4">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<sample t="37" lt="0" ts="1505910737994" s="true" lb="获取课堂任务和关联任务的id" rc="200" rm="OK" tn="张鹏飞--任务中心 8-1" dt="text" by="0" ng="1" na="4"/>
+<httpSample t="813" lt="813" ts="1505910737233" s="true" lb="User/Sign :签到" rc="200" rm="OK" tn="张鹏飞--签到 2-1" dt="" by="235" ng="1" na="4">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="56" lt="56" ts="1505910738047" s="true" lb="User/SignHistoryMsg :历史签到信息" rc="200" rm="OK" tn="张鹏飞--签到 2-1" dt="" by="495" ng="1" na="4">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="60" lt="60" ts="1505910738049" s="true" lb="User/CheckTask：查询关联任务是否完成" rc="200" rm="OK" tn="张鹏飞--任务中心 8-1" dt="" by="183" ng="1" na="3">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="197" lt="197" ts="1505910738029" s="true" lb="SetStoreDefault：设置回第一个门店" rc="200" rm="OK" tn="张鹏飞--店铺主页数据 1-1" dt="" by="183" ng="1" na="3">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="47" lt="47" ts="1505910738227" s="true" lb="SignIn：店铺主页数据" rc="200" rm="OK" tn="张鹏飞--店铺主页数据 1-1" dt="" by="653" ng="1" na="3">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="259" lt="259" ts="1505910738110" s="true" lb="TaskCompleteList：任务完成列表" rc="200" rm="OK" tn="张鹏飞--任务中心 8-1" dt="" by="713" ng="1" na="3">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="135" lt="135" ts="1505910738275" s="true" lb="SignIn2：店铺主页数据2" rc="200" rm="OK" tn="张鹏飞--店铺主页数据 1-1" dt="" by="239" ng="1" na="2">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="13" lt="13" ts="1505910738411" s="true" lb="RevenueDetial：店铺收入明细" rc="200" rm="OK" tn="张鹏飞--店铺主页数据 1-1" dt="" by="368" ng="1" na="2">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="75" lt="75" ts="1505910738425" s="true" lb="MsgList:消息列表" rc="200" rm="OK" tn="张鹏飞--店铺主页数据 1-1" dt="" by="1703" ng="1" na="2">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="8" lt="8" ts="1505910738501" s="true" lb="PurchaseList:雅堂采购" rc="200" rm="OK" tn="张鹏飞--店铺主页数据 1-1" dt="" by="285" ng="1" na="2">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="379" lt="379" ts="1505910738509" s="true" lb="ClassList:小超课堂" rc="200" rm="OK" tn="张鹏飞--店铺主页数据 1-1" dt="" by="11852" ng="1" na="2">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="540" lt="540" ts="1505910738891" s="true" lb="ConnectCustomerSer:联系客服" rc="200" rm="OK" tn="张鹏飞--店铺主页数据 1-1" dt="" by="850" ng="1" na="2">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="4232" lt="4232" ts="1505910737460" s="true" lb="User/ClassifyList :分类列表" rc="200" rm="OK" tn="张鹏飞--外卖商品 9-1" dt="" by="10114" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="49" lt="49" ts="1505910741693" s="true" lb="User/GoodsOutList :外卖商品列表" rc="200" rm="OK" tn="张鹏飞--外卖商品 9-1" dt="" by="566" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="1053" lt="1053" ts="1505910742749" s="true" lb="User/ModifyGoodsFrameType :批量下架" rc="200" rm="OK" tn="张鹏飞--外卖商品 9-1" dt="" by="183" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="30" lt="30" ts="1505910744804" s="true" lb="User/GoodsOutDetial :外卖商品详情,检查是否下架成功" rc="200" rm="OK" tn="张鹏飞--外卖商品 9-1" dt="" by="450" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="1030" lt="1030" ts="1505910745836" s="true" lb="User/ModifyGoodsFrameType :批量上架" rc="200" rm="OK" tn="张鹏飞--外卖商品 9-1" dt="" by="183" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="54" lt="54" ts="1505910747867" s="true" lb="User/GoodsOutDetial :外卖商品详情,检查是否上架成功" rc="200" rm="OK" tn="张鹏飞--外卖商品 9-1" dt="" by="450" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="34" lt="34" ts="1505910747923" s="true" lb="User/GoodsOutList :外卖商品列表" rc="200" rm="OK" tn="张鹏飞--外卖商品 9-1" dt="" by="566" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<sample t="10" lt="0" ts="1505910747958" s="true" lb="随机一个价格" rc="200" rm="OK" tn="张鹏飞--外卖商品 9-1" dt="text" by="0" ng="1" na="1"/>
+<httpSample t="1025" lt="1025" ts="1505910748969" s="true" lb="User/ModifyOutGoodsPrice :外卖商品调价" rc="200" rm="OK" tn="张鹏飞--外卖商品 9-1" dt="" by="183" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="31" lt="31" ts="1505910750995" s="false" lb="User/GoodsOutDetial :外卖商品详情" rc="200" rm="OK" tn="张鹏飞--外卖商品 9-1" dt="" by="450" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /&quot;GoodsPrice&quot;:&quot;307723842&quot;,/</failureMessage>
+  </assertionResult>
+</httpSample>
+
+<sample t="22" lt="0" ts="1505910753379" s="true" lb="随机DeviceId" rc="200" rm="OK" tn="王瑞瑶--接口测试用例" dt="text" by="0" ng="1" na="1"/>
+<httpSample t="202" lt="202" ts="1505910753865" s="true" lb="GetPublickey：获取公钥" rc="200" rm="OK" tn="王瑞瑶--接口测试用例" dt="" by="535" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<sample t="145" lt="0" ts="1505910754089" s="true" lb="RSA加密：随机UUID并对UUID进行加密" rc="200" rm="OK" tn="王瑞瑶--接口测试用例" dt="text" by="0" ng="1" na="1"/>
+<httpSample t="11" lt="11" ts="1505910754237" s="true" lb="PostDesKry：上传私钥" rc="200" rm="OK" tn="王瑞瑶--接口测试用例" dt="" by="183" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<sample t="40" lt="0" ts="1505910754249" s="true" lb="DES加密：对登录的用户名密码加密" rc="200" rm="OK" tn="王瑞瑶--接口测试用例" dt="text" by="0" ng="1" na="1"/>
+<httpSample t="190" lt="190" ts="1505910754290" s="true" lb="Login：登录" rc="200" rm="OK" tn="王瑞瑶--接口测试用例" dt="" by="681" ng="1" na="1"/>
+<sample t="168" lt="0" ts="1505910754481" s="true" lb="DES解密：对登录返回的值进行解密" rc="200" rm="OK" tn="王瑞瑶--接口测试用例" dt="text" by="0" ng="1" na="1"/>
+<httpSample t="23" lt="23" ts="1505910754720" s="true" lb="SignIn：店铺主页数据" rc="200" rm="OK" tn="王瑞瑶--接口测试用例 1-1" dt="" by="653" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="21" lt="21" ts="1505910754745" s="true" lb="SignIn2：店铺主页数据2" rc="200" rm="OK" tn="王瑞瑶--接口测试用例 1-1" dt="" by="239" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="22" lt="22" ts="1505910754767" s="true" lb="RevenueDetial：店铺收入明细" rc="200" rm="OK" tn="王瑞瑶--接口测试用例 1-1" dt="" by="368" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="11" lt="11" ts="1505910754791" s="true" lb="TransactionList：交易流水" rc="200" rm="OK" tn="王瑞瑶--接口测试用例 1-1" dt="" by="1181" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="73" lt="73" ts="1505910754804" s="true" lb="User/GoodsDetial :查询商品内容" rc="200" rm="OK" tn="王瑞瑶--接口测试用例 1-1" dt="" by="417" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="38" lt="38" ts="1505910754879" s="true" lb="User/ModifyGoodsPrices :商品调价" rc="200" rm="OK" tn="王瑞瑶--接口测试用例 1-1" dt="" by="183" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="29" lt="29" ts="1505910754918" s="true" lb="User/GoodsDetial :商品调价后确认调价成功" rc="200" rm="OK" tn="王瑞瑶--接口测试用例 1-1" dt="" by="417" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="54" lt="54" ts="1505910754949" s="true" lb="User/MsgList :消息列表" rc="200" rm="OK" tn="王瑞瑶--接口测试用例 1-1" dt="" by="1703" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="54" lt="54" ts="1505910755014" s="true" lb="User/GoodsList :门店商品列表" rc="200" rm="OK" tn="王瑞瑶--接口测试用例 1-1" dt="" by="4320" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="338" lt="338" ts="1505910755074" s="true" lb="User/ClassList :小超课堂" rc="200" rm="OK" tn="王瑞瑶--接口测试用例 1-1" dt="" by="11852" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="65" lt="65" ts="1505910755419" s="true" lb="User/StockList :库存商品列表" rc="200" rm="OK" tn="王瑞瑶--接口测试用例 1-1" dt="" by="2969" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="86" lt="86" ts="1505910755485" s="true" lb="User/TaskCompleteList :任务完成记录" rc="200" rm="OK" tn="王瑞瑶--接口测试用例 1-1" dt="" by="713" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+
+</testResults>
