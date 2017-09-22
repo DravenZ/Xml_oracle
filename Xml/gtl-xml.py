@@ -9,16 +9,20 @@ collection = DOMTree.documentElement
 if collection.hasAttribute("shelf"):
    print "Root element : %s" % collection.getAttribute("shelf")
 
-# 在集合中获取所有电影
+# 在集合中获取所有Http请求
 httpSamples = collection.getElementsByTagName("httpSample")
 httpSamples = list(httpSamples)
 print type(httpSamples)
 print "共有" + str(len(httpSamples)) + "个Http请求"
-# 打印每部电影的详细信息
+# 打印每个Http请求的详细信息
 for httpSample in httpSamples:
     if httpSample.hasAttribute("lb"):
-        print "Title: %s" % httpSample.getAttribute("lb")
-        print 111
+        print "Http: %s" % httpSample.getAttribute("lb")
+        print httpSample.getAttribute("tn")
+
+
+
+
    # print "*****Movie*****"
    # if movie.hasAttribute("title"):
    #    print "Title: %s" % movie.getAttribute("title")
