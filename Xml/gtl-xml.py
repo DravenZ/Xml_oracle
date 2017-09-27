@@ -96,6 +96,8 @@ if __name__ == '__main__':
     print "失败的用例条数：",failcount
     for i in httpfaillist:
         print i
+    for i in httpalllist:
+        print i
 # if collection.hasAttribute("version"):
 #    print "version : %s" % collection.getAttribute("version")
 
