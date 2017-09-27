@@ -51,6 +51,14 @@
     <error>false</error>
   </assertionResult>
 </httpSample>
+<httpSample t="31" lt="31" ts="1505910750995" s="false" lb="1122-User/GoodsOutDetial :外卖商品详情" rc="200" rm="OK" tn="张鹏飞--外卖商品 9-1" dt="" by="450" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /&quot;GoodsPrice&quot;:&quot;307723842&quot;,/</failureMessage>
+  </assertionResult>
+</httpSample>
 <httpSample t="77" lt="77" ts="1505910737335" s="true" lb="999-SetShopBusiness：营业状态修改" rc="200" rm="OK" tn="张鹏飞--O2O店铺管理 7-1" dt="" by="183" ng="1" na="7">
   <assertionResult>
     <name>响应断言</name>
