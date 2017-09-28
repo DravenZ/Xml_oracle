@@ -95,9 +95,13 @@ if __name__ == '__main__':
     print "所有的用例条数：", allcount
     print "失败的用例条数：", failcount
     print "成功的用例条数：", allcount - failcount
+
+    print "失败的用例信息："
     for i in httpfaillist:
         for key, value in i.items():
             print key, value
+
+    print "所有的用例信息："
     for i in httpalllist:
         for key, value in i.items():
             print key, value
