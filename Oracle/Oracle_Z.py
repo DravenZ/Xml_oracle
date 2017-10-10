@@ -1,31 +1,31 @@
 # -*- coding:utf8 -*-
-import cx_Oracle   #引用模块cx_Oracle
+import cx_Oracle
 
-
-
-class oracle():
+class Oracle:
     """
-    连接数据库
+        功能：连接oracle数据库并操作数据库
+        作者：zhangpengfei
     """
-    def __init__(self, dbname, user, password):
+    def __init__(self, db_name, user, password):
+        """
+                功能：连接oracle数据库
+                参数：user,password,dbname(用户名、密码 、数据库)
+                返回：__init__无返回
+                作者：zhangpengfei
+            """
         try:
-            connect = cx_Oracle.connect(user, password, dbname)
+            connect = cx_Oracle.connect(user, password, db_name)
             self.connect = connect
         except Exception as e:
-            print("connect failed",e)
+            print("Connect failed",e)
 
-    # def conn(self, dbname, user, password):
-    #     try:
-    #         # d = cx_Oracle.makedsn(host, port, dbname)
-    #         # cx_Oracle.connect()
-    #         connect = cx_Oracle.connect(user, password, dbname)
-    #         return True, connect
-    #     except Exception as e:
-    #         print("connect failed",e)
-    #         return False, e
-
-    # 查询
     def sqlsearch(self, sql, db):
+        """
+            功能：查询
+            参数：sql,db(sql语句,连接db)
+            返回：成功返回True和查询结果（list中套的元组），失败返回False和异常信息
+            作者：zhangpengfei
+            """
         try:
             cur = db.cursor()
             x = cur.execute(sql)
@@ -36,9 +36,13 @@ class oracle():
             print("search failed", e)
             return False, e
 
-    # 增删改
-    def sqloperation(self, sql, db, params = None):
-        # execute dml with parameters
+    def sqloperation(self, sql, db, params=None):
+        """
+               功能：查询
+               参数：sql,db，params(sql语句,连接db,params参数是选填参数，若不写该参数，sql语句应该是完整无误的)
+               返回：成功返回True和影响结果，失败返回False和异常信息
+               作者：zhangpengfei
+           """
         try:
             cr = db.cursor()
             if params != None:
@@ -71,7 +75,7 @@ if __name__ == '__main__':
     deleteparam = [{'SNO':5},{'SNO':6}]
     updateparam = [{'SAGE':201,'SSEX':'m1'},{'SAGE':202,'SSEX':'m2'}]
 
-    O = oracle(dbname, user, password)
+    O = Oracle(dbname, user, password)
     # connectresult, conn = O.conn(dbname, user, password)
 
     # 单条插入

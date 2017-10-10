@@ -6,6 +6,8 @@ import xml.dom.minidom
 import time
 
 from MysqlDB.Mysql import MysqlDb
+from Oracle.Oracle_Z import Oracle
+print help(Oracle)
 
 user = 'root'
 password = '123456'
