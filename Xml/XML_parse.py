@@ -9,6 +9,7 @@ from MysqlDB.Mysql import MysqlDb
 from Oracle.Oracle_Z import Oracle
 print help(Oracle)
 
+
 user = 'root'
 password = '123456'
 host = "localhost"
@@ -16,6 +17,10 @@ port = 3306
 dbname = 'test'
 sqldb = MysqlDb()
 conn = sqldb.conn(host, port, dbname, user, password)
+
+O = Oracle(dbname, user, password)
+O.__sqlsearch__(sql="",db=O.connect)
+
 
 class gtl():
     # filename = "JmeterReport.jtl"

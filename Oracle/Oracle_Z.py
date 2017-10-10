@@ -19,7 +19,7 @@ class Oracle:
         except Exception as e:
             print("Connect failed",e)
 
-    def sqlsearch(self, sql, db):
+    def __sqlsearch__(self, sql, db):
         """
             功能：查询
             参数：sql,db(sql语句,连接db)
@@ -36,7 +36,7 @@ class Oracle:
             print("search failed", e)
             return False, e
 
-    def sqloperation(self, sql, db, params=None):
+    def __sqloperation__(self, sql, db, params=None):
         """
                功能：查询
                参数：sql,db，params(sql语句,连接db,params参数是选填参数，若不写该参数，sql语句应该是完整无误的)
@@ -79,10 +79,10 @@ if __name__ == '__main__':
     # connectresult, conn = O.conn(dbname, user, password)
 
     # 单条插入
-    opresult, mun = O.sqloperation(sqlinsert, O.connect)
+    opresult, mun = O.__sqloperation__(sqlinsert, O.connect)
     print mun
     # 查询
-    searchresult, re = O.sqlsearch(sqlselect, O.connect)
+    searchresult, re = O.__sqlsearch__(sqlselect, O.connect)
     print("---插入后查询---")
     # print type(re)
     for i in re:
@@ -90,41 +90,41 @@ if __name__ == '__main__':
         print i
 
     # 单条更新
-    opresult, mun = O.sqloperation(sqlupdate, O.connect)
+    opresult, mun = O.__sqloperation__(sqlupdate, O.connect)
     print mun
-    searchresult, re = O.sqlsearch(sqlselect, O.connect)
+    searchresult, re = O.__sqlsearch__(sqlselect, O.connect)
     print("---更新后查询---")
     for i in re:
         print i
 
     # 单条删除
-    opresult, mun = O.sqloperation(sqldelete, O.connect)
+    opresult, mun = O.__sqloperation__(sqldelete, O.connect)
     print mun
-    searchresult, re = O.sqlsearch(sqlselect, O.connect)
+    searchresult, re = O.__sqlsearch__(sqlselect, O.connect)
     print("---删除后查询---")
     for i in re:
         print i
 
     # 多条插入
-    opresult, mun =O.sqloperation(sqlinsertdml2, O.connect,  insertparam)
+    opresult, mun =O.__sqloperation__(sqlinsertdml2, O.connect,  insertparam)
     print mun
-    searchresult, re = O.sqlsearch(sqlselect, O.connect)
+    searchresult, re = O.__sqlsearch__(sqlselect, O.connect)
     print("---DML2插入后查询---")
     for i in re:
         print i
 
     # 多条更新
-    opresult, mun = O.sqloperation(sqlupdatedml2, O.connect, updateparam)
+    opresult, mun = O.__sqloperation__(sqlupdatedml2, O.connect, updateparam)
     print mun
-    searchresult, re = O.sqlsearch(sqlselect, O.connect)
+    searchresult, re = O.__sqlsearch__(sqlselect, O.connect)
     print("---DML2更新后查询---")
     for i in re:
         print i
 
     # 多条删除
-    opresult, mun = O.sqloperation(sqldeletedml2, O.connect, deleteparam)
+    opresult, mun = O.__sqloperation__(sqldeletedml2, O.connect, deleteparam)
     print mun
-    searchresult, re = O.sqlsearch(sqlselect, O.connect)
+    searchresult, re = O.__sqlsearch__(sqlselect, O.connect)
     print("---DML2删除后查询---")
     for i in re:
         print i
