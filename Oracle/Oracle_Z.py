@@ -5,47 +5,43 @@ import cx_Oracle   #引用模块cx_Oracle
 
 class oracle():
     # 连接数据库
-    def conn(self,host,port,dbname,user,password):
+    def conn(self, dbname, user, password):
         try:
-            d = cx_Oracle.makedsn(host, port, dbname)
-            #cx_Oracle.connect()
-            connect = cx_Oracle.connect(user,password,dbname)
-            return connect
+            # d = cx_Oracle.makedsn(host, port, dbname)
+            # cx_Oracle.connect()
+            connect = cx_Oracle.connect(user, password, dbname)
+            return True, connect
         except Exception as e:
             print("connect failed",e)
+            return False, e
 
     # 查询
-    def sqlsearch(self,sql,db):
+    def sqlsearch(self, sql, db):
         try:
             cur = db.cursor()
             x = cur.execute(sql)                   #使用cursor进行各种操作
             results = x.fetchall()
             cur.close()
-            return results
+            return True, results
         except Exception as e:
             print("search failed", e)
+            return False, e
 
-    # 直接增删改
-    def sqlDML(self,sql, db):
-        # include: insert,update,delete
-        try:
-            cr = db.cursor()
-            cr.execute(sql)
-            cr.close()
-            db.commit()
-        except Exception as e:
-            print("sqlDML failed",e)
-
-    # 有参数增删改
-    def sqlDML2(self,sql, params, db):
+    # 增删改
+    def sqloperation(self, sql, db, params = None):
         # execute dml with parameters
         try:
             cr = db.cursor()
-            cr.executemany(sql, params)
+            if params != None:
+                cr.executemany(sql, params)
+            else:
+                cr.execute(sql)
             cr.close()
             db.commit()
+            return True
         except Exception as e:
-            print("sqlDML2 failed", e)
+            print("sqloperation failed", e)
+            return False
 
 if __name__ == '__main__':
     user = 'draven'
@@ -66,53 +62,55 @@ if __name__ == '__main__':
     updateparam = [{'SAGE':201,'SSEX':'m1'},{'SAGE':202,'SSEX':'m2'}]
 
     O = oracle()
-    conn = O.conn(host,port,dbname,user,password)
+    connectresult, conn = O.conn(dbname, user, password)
 
     # 单条插入
-    O.sqlDML(sqlinsert, conn)
+    O.sqloperation(sqlinsert, conn)
 
     # 查询
-    re = O.sqlsearch(sqlselect,conn)
+    searchresult, re = O.sqlsearch(sqlselect,conn)
     print("---插入后查询---")
+    # print type(re)
     for i in re:
+        # print type(i)
         print i
 
     # 更新
-    O.sqlDML(sqlupdate,conn)
+    O.sqloperation(sqlupdate,conn)
 
-    re = O.sqlsearch(sqlselect, conn)
+    searchresult, re = O.sqlsearch(sqlselect, conn)
     print("---更新后查询---")
     for i in re:
         print i
 
     # 删除
-    O.sqlDML(sqldelete,conn)
+    O.sqloperation(sqldelete,conn)
 
-    re = O.sqlsearch(sqlselect, conn)
+    searchresult, re = O.sqlsearch(sqlselect, conn)
     print("---删除后查询---")
     for i in re:
         print i
 
     # DML2多条插入
-    O.sqlDML2(sqlinsertdml2, insertparam, conn)
+    O.sqloperation(sqlinsertdml2, conn,  insertparam)
 
-    re = O.sqlsearch(sqlselect, conn)
+    searchresult, re = O.sqlsearch(sqlselect, conn)
     print("---DML2插入后查询---")
     for i in re:
         print i
 
     # DML2 更新
-    O.sqlDML2(sqlupdatedml2, updateparam, conn)
+    O.sqloperation(sqlupdatedml2, conn, updateparam)
 
-    re = O.sqlsearch(sqlselect, conn)
+    searchresult, re = O.sqlsearch(sqlselect, conn)
     print("---DML2更新后查询---")
     for i in re:
         print i
 
     # DML2 删除
-    O.sqlDML2(sqldeletedml2, deleteparam, conn)
+    O.sqloperation(sqldeletedml2, conn, deleteparam)
 
-    re = O.sqlsearch(sqlselect, conn)
+    searchresult, re = O.sqlsearch(sqlselect, conn)
     print("---DML2删除后查询---")
     for i in re:
         print i
