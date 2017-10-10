@@ -36,12 +36,13 @@ class oracle():
                 cr.executemany(sql, params)
             else:
                 cr.execute(sql)
+            rowcount = cr.rowcount
             cr.close()
             db.commit()
-            return True
+            return True, rowcount
         except Exception as e:
             print("sqloperation failed", e)
-            return False
+            return False, e
 
 if __name__ == '__main__':
     user = 'draven'
@@ -65,8 +66,8 @@ if __name__ == '__main__':
     connectresult, conn = O.conn(dbname, user, password)
 
     # 单条插入
-    O.sqloperation(sqlinsert, conn)
-
+    opresult, mun = O.sqloperation(sqlinsert, conn)
+    print mun
     # 查询
     searchresult, re = O.sqlsearch(sqlselect,conn)
     print("---插入后查询---")
@@ -75,41 +76,41 @@ if __name__ == '__main__':
         # print type(i)
         print i
 
-    # 更新
-    O.sqloperation(sqlupdate,conn)
-
+    # 单条更新
+    opresult, mun = O.sqloperation(sqlupdate,conn)
+    print mun
     searchresult, re = O.sqlsearch(sqlselect, conn)
     print("---更新后查询---")
     for i in re:
         print i
 
-    # 删除
-    O.sqloperation(sqldelete,conn)
-
+    # 单条删除
+    opresult, mun = O.sqloperation(sqldelete,conn)
+    print mun
     searchresult, re = O.sqlsearch(sqlselect, conn)
     print("---删除后查询---")
     for i in re:
         print i
 
-    # DML2多条插入
-    O.sqloperation(sqlinsertdml2, conn,  insertparam)
-
+    # 多条插入
+    opresult, mun =O.sqloperation(sqlinsertdml2, conn,  insertparam)
+    print mun
     searchresult, re = O.sqlsearch(sqlselect, conn)
     print("---DML2插入后查询---")
     for i in re:
         print i
 
-    # DML2 更新
-    O.sqloperation(sqlupdatedml2, conn, updateparam)
-
+    # 多条更新
+    opresult, mun = O.sqloperation(sqlupdatedml2, conn, updateparam)
+    print mun
     searchresult, re = O.sqlsearch(sqlselect, conn)
     print("---DML2更新后查询---")
     for i in re:
         print i
 
-    # DML2 删除
-    O.sqloperation(sqldeletedml2, conn, deleteparam)
-
+    # 多条删除
+    opresult, mun = O.sqloperation(sqldeletedml2, conn, deleteparam)
+    print mun
     searchresult, re = O.sqlsearch(sqlselect, conn)
     print("---DML2删除后查询---")
     for i in re:
