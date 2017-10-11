@@ -2,28 +2,10 @@
 
 # from xml.dom.minidom import parse
 import xml.dom.minidom
-
 import time
-
-from MysqlDB.Mysql import MysqlDb
-from Oracle.Oracle_Z import Oracle
-#print help(Oracle)
-
-
-user = 'root'
-password = '123456'
-host = "localhost"
-port = 3306
-dbname = 'test'
-sqldb = MysqlDb()
-conn = sqldb.conn(host, port, dbname, user, password)
-
-# O = Oracle(dbname, user, password)
-# O.__sqlsearch__(sql="",db=O.connect)
 
 
 class gtl():
-    # filename = "JmeterReport.jtl"
 
     def __init__(self, filename, product_name):
         self.filename = filename
@@ -89,30 +71,8 @@ class gtl():
 
     # 获取用例总数
     def get_run_case_count(self, httpSamples):
-        print "共有" + str(len(httpSamples)) + "个Http请求"
+        # print "共有" + str(len(httpSamples)) + "个Http请求"
         return len(httpSamples)
-
-
-if __name__ == '__main__':
-    product_name = '小超人'
-    g = gtl("JmeterReport.jtl", product_name)
-    collection = g.getCollection(g.filename)
-    httplist = g.gethttplist(collection)
-    fail_count, httpalllist, httpfaillist = g.getCase_info(httplist)
-    all_count = g.get_run_case_count(httplist)
-    print "所有的用例条数：", all_count
-    print "失败的用例条数：", fail_count
-    print "成功的用例条数：", all_count - fail_count
-
-    print "失败的用例信息："
-    for i in httpfaillist:
-        for key, value in i.items():
-            print key, value
-
-    print "所有的用例信息："
-    for i in httpalllist:
-        for key, value in i.items():
-            print key, value
 
 
 

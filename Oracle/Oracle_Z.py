@@ -71,8 +71,6 @@ class Oracle:
 if __name__ == '__main__':
     user = 'draven'
     password = 'draven123'
-    host = "localhost"
-    port = 1521
     dbname = "orclpdb"
 
     sqlselect = "select * from student"
