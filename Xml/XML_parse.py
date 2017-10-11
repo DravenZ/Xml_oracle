@@ -7,7 +7,7 @@ import time
 
 from MysqlDB.Mysql import MysqlDb
 from Oracle.Oracle_Z import Oracle
-print help(Oracle)
+#print help(Oracle)
 
 
 user = 'root'
@@ -18,8 +18,8 @@ dbname = 'test'
 sqldb = MysqlDb()
 conn = sqldb.conn(host, port, dbname, user, password)
 
-O = Oracle(dbname, user, password)
-O.__sqlsearch__(sql="",db=O.connect)
+# O = Oracle(dbname, user, password)
+# O.__sqlsearch__(sql="",db=O.connect)
 
 
 class gtl():
@@ -71,11 +71,11 @@ class gtl():
                     error = asserts.getElementsByTagName('error')[0].childNodes[0].nodeValue.strip()
                     if error != 'false' or failure != 'false' or httpSample.getAttribute("rc") != '200':
                         fail_cause = asserts.getElementsByTagName('failureMessage')[0].childNodes[0].nodeValue.strip()
-                        # print fail_cause
-                        timestamp = httpSample.hasAttribute("ts")
-                        # 转换成localtime
-                        time_local = time.localtime(timestamp)
-                        # 转换成新的时间格式(2016-05-05 20:28:54)
+                        # 获取时间戳，截取前10位
+                        timestamp = (httpSample.getAttribute("ts").encode("utf-8"))[0:10]
+                        # 转换成localtime，只有是float类型才行，强制转换
+                        time_local = time.localtime(float(timestamp))
+                        # 转换成新的时间格式(2017-09-20 20:32:30)
                         run_date = time.strftime("%Y-%m-%d %H:%M:%S", time_local)
                         fail_count = fail_count + 1
                         httpfaildata['case_no'] = case_no
