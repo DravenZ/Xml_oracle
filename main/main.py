@@ -8,7 +8,7 @@ class insert:
         self.project_name = project_name
 
     def insert_project_info(self):
-        sqlsearch = "select ID from PROJECT_INFO where project_name = '" + product_name + "'"
+        sqlsearch = "select ID from PROJECT_INFO where project_name = '" + self.project_name + "'"
         searchresult, re = O.__sqlsearch__(sqlsearch)
         sql = "insert into project_info(project_name) VALUES ('" + self.project_name + "')"
         if re == []:
@@ -62,8 +62,6 @@ if __name__ == '__main__':
     result_set = []
     res = {}
 
-
-
     O = Oracle(dbname, user, password)
     insert = insert(product_name)
     # 插入项目，若有则不插入
@@ -72,9 +70,9 @@ if __name__ == '__main__':
 
 
     #插入所有的用例进入case_info表
-    # result, mun = insert.insert_case_info(httpalllist, project_id)
-    #print "插入所有用例的结果：", result
-    #print "插入的所有的用例数：", mun
+    result, mun = insert.insert_case_info(httpalllist, project_id)
+    print "插入所有用例的结果：", result
+    print "插入的所有的用例数：", mun
 
     # 插入所有失败的用例进入failed_case_info表
     result, mun = insert.insert_failed_case_info(httpfaillist, project_id)
@@ -92,17 +90,17 @@ if __name__ == '__main__':
     print "插入result_set总数的结果：", result
     print "插入result_set总数的条数：", mun
 
-    # print "所有的用例条数：", all_count
-    # print "失败的用例条数：", fail_count
-    # print "成功的用例条数：", all_count - fail_count
-    #
-    # print "失败的用例信息："
-    # for i in httpfaillist:
-    #     for key, value in i.items():
-    #         print key, value
+    print "所有的用例条数：", all_count
+    print "失败的用例条数：", fail_count
+    print "成功的用例条数：", all_count - fail_count
 
-    # print "所有的用例信息："
-    # print httpalllist[:3]
-    # for i in httpalllist:
-    #     for key, value in i.items():
-    #         print key, value
+    print "失败的用例信息："
+    for i in httpfaillist:
+        for key, value in i.items():
+            print key, value
+
+    print "所有的用例信息："
+    print httpalllist[:3]
+    for i in httpalllist:
+        for key, value in i.items():
+            print key, value
