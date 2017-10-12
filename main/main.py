@@ -14,10 +14,12 @@ if __name__ == '__main__':
     fail_count, httpalllist, httpfaillist = g.getCase_info(httplist)
     all_count = g.get_run_case_count(httplist)
 
-    sqlsearch = "select * from student"
+    #sqlsearch = "select * from PROJECT_INFO where project_name = '" + product_name + "'"
+    sqlsearch = "select * from project_info where project_name = '小超人'"
+    # sqlinsert = "insert into student values(1,'zpf','男',17)"
     print sqlsearch
     O = Oracle(dbname, user, password)
-    searchresult, re = O.__sqlsearch__("sqlsearch")
+    searchresult, re = O.__sqlsearch__(sqlsearch)
     print re
 
 

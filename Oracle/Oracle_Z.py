@@ -1,6 +1,11 @@
 # -*- coding:utf8 -*-
 import cx_Oracle
-
+import sys
+import os
+# 添加该编码，使得能正确查询和插入汉字
+reload(sys)
+sys.setdefaultencoding('utf-8')
+os.environ['NLS_LANG'] = 'SIMPLIFIED CHINESE_CHINA.UTF8'
 class Oracle:
     """
         功能：连接oracle数据库并操作数据库
@@ -74,7 +79,7 @@ if __name__ == '__main__':
     dbname = "orclpdb"
 
     sqlselect = "select * from student"
-    sqlinsert = "insert into student values(1,'zpf','m',17)"
+    sqlinsert = "insert into student values(1,'zpf','男',17)"
     sqlupdate = "update student set SSEX = 'man' where SSEX = 'm'"
     sqldelete = "delete from student where SNO = 1"
     sqlinsertdml2 = 'insert into student values(:SNO,:SNAME,:SSEX,:SAGE)'
