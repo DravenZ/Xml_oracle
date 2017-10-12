@@ -82,10 +82,10 @@ if __name__ == '__main__':
     sqlinsert = "insert into student values(1,'zpf','男',17)"
     sqlupdate = "update student set SSEX = 'man' where SSEX = 'm'"
     sqldelete = "delete from student where SNO = 1"
-    sqlinsertdml2 = 'insert into student values(:SNO,:SNAME,:SSEX,:SAGE)'
+    sqlinsertdml2 = 'insert into student values(:sno,:SNAME,:SSEX,:SAGE)'
     sqldeletedml2 = "delete from student where SNO = :SNO"
     sqlupdatedml2 = "update student set SAGE = :SAGE where SSEX = :SSEX"
-    insertparam = [{'SNO':5,'SNAME':'wu1','SSEX':'m1','SAGE':18},{'SNO':6,'SNAME':'wu2','SSEX':'m2','SAGE':18}]
+    insertparam = [{'SNAME':'wu1', 'SNO':5,'SSEX':'m1','SAGE':18},{'SNO':6,'SNAME':'wu2','SSEX':'m2','SAGE':18}]
     deleteparam = [{'SNO':5},{'SNO':6}]
     updateparam = [{'SAGE':201,'SSEX':'m1'},{'SAGE':202,'SSEX':'m2'}]
 

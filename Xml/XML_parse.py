@@ -61,8 +61,8 @@ class gtl():
                         run_date = time.strftime("%Y-%m-%d %H:%M:%S", time_local)
                         fail_count = fail_count + 1
                         httpfaildata['case_no'] = case_no
-                        httpfaildata['case_name'] = case_name
-                        httpfaildata['creater'] = creater
+                        # httpfaildata['case_name'] = case_name
+                        # httpfaildata['creater'] = creater
                         httpfaildata['fail_cause'] = fail_cause
                         httpfaildata['run_date'] = run_date
                         httpfaillist.append(httpfaildata)
