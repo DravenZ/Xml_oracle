@@ -3,6 +3,7 @@
 # from xml.dom.minidom import parse
 import xml.dom.minidom
 import time
+from datetime import datetime
 
 
 class gtl():
@@ -59,6 +60,7 @@ class gtl():
                         time_local = time.localtime(float(timestamp))
                         # 转换成新的时间格式(2017-09-20 20:32:30)
                         run_date = time.strftime("%Y-%m-%d %H:%M:%S", time_local)
+                        run_date = datetime.strptime(run_date,"%Y-%m-%d %H:%M:%S")
                         fail_count = fail_count + 1
                         httpfaildata['case_no'] = case_no
                         # httpfaildata['case_name'] = case_name

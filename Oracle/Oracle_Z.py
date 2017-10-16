@@ -74,9 +74,9 @@ class Oracle:
             return False, e
 
 if __name__ == '__main__':
-    user = 'draven'
-    password = 'draven123'
-    dbname = "orclpdb"
+    user = 'C##valtest'
+    password = 'Valtest123'
+    dbname = "orclpdbt"
 
     sqlselect = "select * from student"
     sqlinsert = "insert into student values(1,'zpf','男',17)"
