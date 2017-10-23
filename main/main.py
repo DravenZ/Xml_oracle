@@ -38,6 +38,7 @@ class insert:
 
     def insert_failed_case_info(self, httpfaillist, product_id):
         sql = "insert into HAWKEYE.FAILED_CASE_INFO(case_no, RESULT_SET_ID, test_type, run_date, CREATE_DATE, run_evn, product_id, fail_cause, CAUSE_TYPE_ID) VALUES(:case_no, :RESULT_SET_ID, :test_type, :run_date, :CREATE_DATE, :run_evn, :product_id, :fail_cause, :CAUSE_TYPE_ID)"
+        param = []
         param = httpfaillist
         sql_result = "select max(id) from HAWKEYE.RESULT_SET"
         searchresult, re = self.O.__sqlsearch__(sql_result)
@@ -62,7 +63,7 @@ class insert:
 
     def main(self):
         test_type = 1
-        g = gtl("JmeterReport.jtl", product_name)
+        g = gtl("TestReportds.jtl", product_name)
         collection = g.getCollection(g.filename)
         httplist = g.gethttplist(collection)
         fail_count, httpalllist, httpfaillist = g.getCase_info(httplist)
@@ -105,11 +106,12 @@ class insert:
                 print key, value
 
         print "所有的用例信息："
-        print httpalllist[:3]
+        # print httpalllist[:3]
         for i in httpalllist:
             for key, value in i.items():
                 print key, value
 
+        self.O.close()
 
 
 if __name__ == '__main__':

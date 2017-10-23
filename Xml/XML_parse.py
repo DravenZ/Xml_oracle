@@ -14,13 +14,21 @@ class gtl():
 
     def getCollection(self, filename):
         # 使用minidom解析器打开 XML 文档
-        DOMTree = xml.dom.minidom.parse(filename)
-        collection = DOMTree.documentElement
-        return collection
+        try:
+            DOMTree = xml.dom.minidom.parse(filename)
+            collection = DOMTree.documentElement
+            return collection
+        except Exception as e:
+            print "打开文件异常",e
+            return
 
     # 在集合中获取所有Http请求
     def gethttplist(self, collection):
-        httpSamples = collection.getElementsByTagName("httpSample")
+        try:
+            httpSamples = collection.getElementsByTagName("httpSample")
+        except Exception as e:
+            print "查找httpSample异常",e
+            return
         httpSamples = list(httpSamples)
         # print "共有" + str(len(httpSamples)) + "个Http请求"
         return httpSamples
@@ -35,16 +43,22 @@ class gtl():
             httpfaildata = {}
 
             if httpSample.hasAttribute("lb"):
-                case_no = (httpSample.getAttribute("lb").encode("utf-8")).split('-')[0]
-                case_name = (httpSample.getAttribute("lb").encode("utf-8")).split('-')[1]
-                httpdata['case_no'] = case_no
-                httpdata['case_name'] = case_name
-                # print "用例编号、用例名称: %s,%s" % (case_no,case_name)
+                try:
+                    case_no = (httpSample.getAttribute("lb").encode("utf-8")).split('-')[0]
+                    case_name = (httpSample.getAttribute("lb").encode("utf-8")).split('-')[1]
+                    httpdata['case_no'] = case_no
+                    httpdata['case_name'] = case_name
+                    # print "用例编号、用例名称: %s,%s" % (case_no,case_name)
+                except Exception as e:
+                    print "用例名称和编号异常",e
 
             if httpSample.hasAttribute("tn"):
-                creater = (httpSample.getAttribute("tn").encode("utf-8")).split('-')[0]
-                httpdata['creater'] = creater
-                # print "用例设计人员: %s" % creater
+                try:
+                    creater = (httpSample.getAttribute("tn").encode("utf-8")).split('-')[0]
+                    httpdata['creater'] = creater
+                    # print "用例设计人员: %s" % creater
+                except Exception as e:
+                    print "查找用例作者",e
 
             if httpSample.hasAttribute("rc"):
                 # print httpSample.getAttribute("rc")
@@ -75,6 +89,14 @@ class gtl():
     def get_run_case_count(self, httpSamples):
         # print "共有" + str(len(httpSamples)) + "个Http请求"
         return len(httpSamples)
+
+if __name__ == '__main__':
+    g = gtl("TestReport.jtl", "电商")
+    collection = g.getCollection(g.filename)
+    httplist = g.gethttplist(collection)
+    fail_count, httpalllist, httpfaillist = g.getCase_info(httplist)
+    all_count = g.get_run_case_count(httplist)
+
 
 
 

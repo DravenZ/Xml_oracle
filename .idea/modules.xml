@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Xml_oracle.iml" filepath="$PROJECT_DIR$/.idea/Xml_oracle.iml" />
+      <module fileurl="file://F:/workspace/python/.idea/python.iml" filepath="F:/workspace/python/.idea/python.iml" />
     </modules>
   </component>
 </project>
